@@ -9,5 +9,6 @@ def calculate_total(items: list[float]) -> float:
     """
     return sum(items)
 
+
 def apply_discount(total: float, discount_percent: float) -> float:
     return total - (total * discount_percent / 100)
