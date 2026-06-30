@@ -8,5 +8,6 @@ def test_calculate_total():
 def test_calculate_total_lista_vazia():
     assert calculate_total([]) == 0
 
+
 def test_apply_discount():
     assert apply_discount(100, 10) == 90
