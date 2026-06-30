@@ -19,10 +19,17 @@ jobs:
         run: |
           pip install pytest
           pip install pytest-bdd
-          pip install pytest-cov
 
       - name: Executar testes
         run: pytest
 
-      - name: Verificar cobertura
+      - name: Instalar dependencias (com extras)
+        run: |
+          pip install pytest pytest-bdd flake8 pytest-cov
+
+      - name: Verificar estilo do codigo
+        run: flake8 . --max-line-length=100 --exclude=.venv
+
+      - name: Executar testes com cobertura
         run: pytest --cov=. --cov-fail-under=80
+        # Falha se a cobertura for menor que 80%
