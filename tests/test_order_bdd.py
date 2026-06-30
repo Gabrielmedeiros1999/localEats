@@ -1,6 +1,7 @@
 from pytest_bdd import scenarios, given, when, then, parsers
 from order import calculate_total
 
+
 scenarios("features/order_total.feature")
 
 
